@@ -37,5 +37,36 @@
         <p>Texto</p>
         <p>Texto + <spam>Texto</spam></p><!--spam (Regra de digitação)-->
     </div>
+    <table><!--Tabela-->
+        <thead><!--Cabeçalho-->
+            <tr><!--Linha-->
+                <th>Coluna 1</th><!--th (Coluna com thead)-->
+                <th>Coluna 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Dado 1</td>
+                <td>Dado 2</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">Rodapé</td><!--colspan (Mesclar colunas)-->
+            </tr>
+        </tfoot>
+    </table>
+    <form action="" method=""><!--Formulario (action: Local onde os dados seram enviados) (method: metodo de como será enviado)-->
+        <label for="nome">Informe o nome:</label><!--Rotulo (for: acessibildade)-->
+        <input type="text" id="nome" name="nome"><!--input: entrada de dado (type: o tipo do dado) (id: linkador - são unicos) (name: para processar)-->
+        <label for="desc">Descrição:</label>
+        <textarea id="desc" name="desc"></textarea><!--Texto longos-->
+        <label for="opt">Opção:</label>
+        <select id="opt" name="opt">
+            <option valeu="1">Valor 1</option>
+            <option valeu="2">Valor 2</option>
+        </select>
+        <button type="submit">Enviar</button><!--Envia os dados-->
+    </form>
 </body>
 </html>
