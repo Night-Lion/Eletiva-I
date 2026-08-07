@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Revisão HTML e CSS</title>
+    <style>
+        * {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        p {
+            font-size: 20px;
+        }
+        .classe1{
+            color: red;
+        }
+        .classe2{
+            color: blue;
+        }
+        #nome{
+            color: green;
+        }
+    </style>
 </head>
 <body>
     <p>Esse é um paragrafo</p><!--Paragrafo-->
@@ -14,17 +31,17 @@
     <h5>Título de Nível 5</h5>
     <h6>Título de Nível 6</h6>
     <ol><!--Lista Ordenada-->
-        <li>Posição 1</li>
-        <li>Posição 2</li>
+        <li class="classe1">Posição 1</li><!--class chamada o estilo do CSS-->
+        <li class="classe2">Posição 2</li>
         <li>Posição 3</li>
     </ol>
     <ul><!--Lista não Ordenada-->
         <li>Item 1</li>
         <li>Item 2</li>
-        <li>Item 2</li>        
+        <li>Item 3</li>        
     </ul>
     <a href="https://google.com.br">Clique aqui</a><!--Âncora-->
-    <img src="imagem.png" alt="Foto de Perfil" /><!--Imagem-->
+    <img src="imagem.png" alt="Foto de Perfil" width="100" height="100"/><!--Imagem-->
     <nav><!--Navegação-->
         <ul>
             <li>Item</li>
@@ -40,8 +57,8 @@
     <table><!--Tabela-->
         <thead><!--Cabeçalho-->
             <tr><!--Linha-->
-                <th>Coluna 1</th><!--th (Coluna com thead)-->
-                <th>Coluna 2</th>
+                <th class="classe1"></th>>Coluna 1</th><!--th (Coluna com thead)-->
+                <th class="classe2"></th>>Coluna 2</th>
             </tr>
         </thead>
         <tbody>
