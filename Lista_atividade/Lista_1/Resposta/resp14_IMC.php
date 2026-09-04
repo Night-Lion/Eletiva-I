@@ -3,3 +3,4 @@
     $valor2 = $_POST["valor2"];
     $IMC = $valor1 / $valor2 ** 2;
     echo "O IMC é: $IMC";
+?>

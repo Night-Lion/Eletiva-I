@@ -3,3 +3,4 @@
     $valor2 = $_POST["valor2"];
     $produto = $valor1 * $valor2;
     echo "O valor da multiplicação é: $produto";
+?>

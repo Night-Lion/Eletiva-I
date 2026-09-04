@@ -3,3 +3,4 @@
     $valor2 = $_POST["valor2"];
     $potencia = $valor1 ** $valor2;
     echo "A potencia é: $potencia";
+?>

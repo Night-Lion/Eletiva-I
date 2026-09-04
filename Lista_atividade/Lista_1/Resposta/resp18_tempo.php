@@ -6,3 +6,4 @@
     echo "O tempo em horas é: $hora h <br>";
     echo "O tempo em minutos é: $minuto m <br>";
     echo "O tempo em segundos é: $segundo s <br>";
+?>
