@@ -8,7 +8,7 @@
 </head>
 <body> 
     <div class="container py-3">
-        <h1>Exercicio 1</h1>
+        <h1>Exercicio 2</h1>
         <form method="post">
             <div class="mb-3">
                 <label for="valor1" class="form-label">Informe um valor:</label>
@@ -25,18 +25,25 @@
         <?php
             if ($_SERVER["REQUEST_METHOD"] == "POST") 
                 {
-                    $valor1 = $_POST["valor1"];
-                    $valor2 = $_POST["valor2"];
+                    $A = $_POST["valor1"];
+                    $B = $_POST["valor2"];
 
-                    if ($valor1 == $valor2) 
+                    if ($A == $B) 
                         {
-                            $triploSoma = ($valor1 + $valor2) * 3;
                             echo "<h1><p>Resposta:</p></h1>";
-                            echo "<p>O triplo da soma é: $triploSoma</p>";
+                            echo "<p>Números iguais: $A</p>";
                         }
                     else
                         {
-                            echo "<h1><p>Valores não são iguais!</p></h1>";
+                            echo "<h1><p>Resposta:</p></h1>";
+                            if($A > $B)
+                                {
+                                    echo "<p>Ordem Crescente: $B - $A</p>";
+                                }
+                            else
+                                {
+                                    echo "<p>Ordem Crescente: $A - $B</p>";
+                                }
                         }
                 }
         ?>
