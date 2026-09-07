@@ -8,11 +8,11 @@
 </head>
 <body> 
     <div class="container py-3">
-        <h1>Exercicio 6</h1>
+        <h1>Exercicio 8</h1>
         <form method="post">
             <div class="mb-3">
-                <label for="valor1" class="form-label">Informe um número:</label>
-                <input type="number" id="valor1" name="valor1" step="any" class="form-control" required="">
+                <label for="valor1" class="form-label">Informe uma palavra:</label>
+                <input type="text" id="valor1" name="valor1" class="form-control" required="">
                 </div><div class="mb-3">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
@@ -25,11 +25,24 @@
                 {
                     $valor1 = $_POST["valor1"];
 
+                    $qtde = 0;
+
+                    for ($i = 0; $i < strlen($valor1); $i++)
+                    {
+                        switch ($valor1[$i])
+                        {
+                            case "a":
+                            case "e":
+                            case "i":
+                            case "o":
+                            case "u":
+                                $qtde++;
+                                break;
+                        }
+                    }
+
                     echo "<h1>Resposta:</h1>";
-                    
-                    echo "<p>Arredondado para cima: " . ceil($valor1) . "</p>";
-                    echo "<p>Arredondado para baixo: " . floor($valor1) . "</p>";
-                    echo "<p>Arredondado normalmente: " . round($valor1) . "</p>";
+                    echo "<p>Quantidade de vogais: $qtde</p>";
                 }
         ?>
     </div>
