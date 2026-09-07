@@ -8,11 +8,13 @@
 </head>
 <body> 
     <div class="container py-3">
-        <h1>Exercicio 1</h1>
+        <h1>Exercicio 3</h1>
         <form method="post">
             <div class="mb-3">
                 <label for="valor1" class="form-label">Informe uma palavra:</label>
                 <input type="text" id="valor1" name="valor1" class="form-control" required="">
+                <label for="valor2" class="form-label">Informe uma palavra:</label>
+                <input type="text" id="valor2" name="valor2" class="form-control" required="">
                 </div><div class="mb-3">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
@@ -24,11 +26,17 @@
             if ($_SERVER["REQUEST_METHOD"] == "POST") 
                 {
                     $valor1 = $_POST["valor1"];
+                    $valor2 = $_POST["valor2"];
 
                     echo "<h1><p>Resposta:</p></h1>";
-
-                    $quantidade = strlen($valor1);
-                    echo "<p>A palavra possui $quantidade caracteres.</p>";
+                    if (strpos($valor1, $valor2) !== false)
+                        {
+                            echo "<p>A segunda palavra está contida na primeira.</p>";
+                        }
+                        else
+                        {
+                            echo "<p>A segunda palavra não está contida na primeira.</p>";
+                        }
                 }
         ?>
     </div>

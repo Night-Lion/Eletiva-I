@@ -8,7 +8,7 @@
 </head>
 <body> 
     <div class="container py-3">
-        <h1>Exercicio 1</h1>
+        <h1>Exercicio 2</h1>
         <form method="post">
             <div class="mb-3">
                 <label for="valor1" class="form-label">Informe uma palavra:</label>
@@ -27,8 +27,8 @@
 
                     echo "<h1><p>Resposta:</p></h1>";
 
-                    $quantidade = strlen($valor1);
-                    echo "<p>A palavra possui $quantidade caracteres.</p>";
+                    echo "<p>Maiúsculo: " . strtoupper($valor1) . "</p>";
+                    echo "<p>Minúsculo: " . strtolower($valor1) . "</p>";
                 }
         ?>
     </div>
