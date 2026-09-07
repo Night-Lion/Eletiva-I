@@ -3,17 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Exercicio 8</title>
+<title>Exercicio 1</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" >
 </head>
 <body> 
     <div class="container py-3">
-        <h1>Exercicio 8</h1>
+        <h1>Exercicio 1</h1>
         <form method="post">
             <div class="mb-3">
                 <label for="valor1" class="form-label">Informe um valor:</label>
                 <input type="number" id="valor1" name="valor1" class="form-control" required="">
                 </div><div class="mb-3">
+                <label for="valor2" class="form-label">Informe um valor:</label>
+                <input type="number" id="valor2" name="valor2" class="form-control" required="">
             </div>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
@@ -24,16 +26,18 @@
             if ($_SERVER["REQUEST_METHOD"] == "POST") 
                 {
                     $valor1 = $_POST["valor1"];
-                    $fatorial = 1;
+                    $valor2 = $_POST["valor2"];
 
-                    echo "<h1><p>Resposta:</p></h1>";
-
-                    for ($i = 1; $i <= $valor1; $i++)
+                    if ($valor1 == $valor2) 
                         {
-                            $fatorial *= $i;
+                            $triploSoma = ($valor1 + $valor2) * 3;
+                            echo "<h1><p>Resposta:</p></h1>";
+                            echo "<p>O triplo da soma é: $triploSoma</p>";
                         }
-
-                    echo "<p>Fatorial: $fatorial</p>";
+                    else
+                        {
+                            echo "<h1><p>Valores não são iguais!</p></h1>";
+                        }
                 }
         ?>
     </div>
