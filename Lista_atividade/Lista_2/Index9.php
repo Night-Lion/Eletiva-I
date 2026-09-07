@@ -8,7 +8,7 @@
 </head>
 <body> 
     <div class="container py-3">
-        <h1>Exercicio 5</h1>
+        <h1>Exercicio 9</h1>
         <form method="post">
             <div class="mb-3">
                 <label for="valor1" class="form-label">Informe um valor:</label>
@@ -24,20 +24,13 @@
             if ($_SERVER["REQUEST_METHOD"] == "POST") 
                 {
                     $valor1 = $_POST["valor1"];
-                    
+                    $valor2 = $_POST["valor2"];
+
                     echo "<h1><p>Resposta:</p></h1>";
 
-                    if($valor1 < 1)
+                    for ($i = 1; $i <= 10; $i++)
                         {
-                            echo "<p>O valor informado deve ser maior que 0.</p>";
-                        }
-                    else
-                        {
-                            echo "<p>Os números de 1 até $valor1 são:</p>";
-                            for($i = 1; $i <= $valor1; $i++)
-                                {
-                                    echo "<p>$i</p>";
-                                }
+                            echo "<p>$valor1 x $i = " . ($valor1 * $i) . "</p>";
                         }
                 }
         ?>

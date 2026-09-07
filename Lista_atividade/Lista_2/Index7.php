@@ -8,7 +8,7 @@
 </head>
 <body> 
     <div class="container py-3">
-        <h1>Exercicio 5</h1>
+        <h1>Exercicio 7</h1>
         <form method="post">
             <div class="mb-3">
                 <label for="valor1" class="form-label">Informe um valor:</label>
@@ -24,21 +24,15 @@
             if ($_SERVER["REQUEST_METHOD"] == "POST") 
                 {
                     $valor1 = $_POST["valor1"];
-                    
-                    echo "<h1><p>Resposta:</p></h1>";
 
-                    if($valor1 < 1)
-                        {
-                            echo "<p>O valor informado deve ser maior que 0.</p>";
-                        }
-                    else
-                        {
-                            echo "<p>Os números de 1 até $valor1 são:</p>";
-                            for($i = 1; $i <= $valor1; $i++)
-                                {
-                                    echo "<p>$i</p>";
-                                }
-                        }
+                    echo "<h1><p>Resposta:</p></h1>";
+                    
+                do
+                    {
+                        echo "<p>$valor1</p>";
+                        $valor1--;
+                    }
+                while ($valor1 >= 1);
                 }
         ?>
     </div>
